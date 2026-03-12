@@ -1,0 +1,247 @@
+/* =========================
+   FOOTER (Premium Dark-Gold)
+   ========================= */
+.site-footer-gb{
+  background: radial-gradient(1200px 600px at 50% 0%, rgba(255,215,0,.08), transparent 55%),
+              linear-gradient(135deg, #0b0b0b, #151515);
+  padding: 34px 18px 28px;
+  text-align: center;
+  border-top: 1px solid rgba(255,215,0,.55);
+  font-family: "Kanit", sans-serif;
+  box-shadow: 0 -10px 30px rgba(0,0,0,.75);
+}
+
+.site-footer-gb .footer-links-gb{
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.site-footer-gb .footer-links-gb h3{
+  margin: 0 0 12px;
+  font-size: 20px;
+  color: #ffd700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 0 10px rgba(255,215,0,.18);
+}
+
+.footer-desc-gb{
+  font-size: 14px;
+  color: rgba(255,255,255,.72);
+  margin: 0 auto 18px;
+  line-height: 1.7;
+  max-width: 820px;
+}
+
+/* =========================
+   GRID LIST (เดิม 4 คอลัมน์)
+   ========================= */
+.footer-grid{
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
+  text-align: left;
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.footer-grid ul{
+  list-style: none;
+  margin: 0;
+  padding: 0 14px;
+  border-left: 1px solid rgba(255,255,255,.07);
+}
+
+.footer-grid ul:first-child{ border-left: none; }
+
+.footer-grid ul li{
+  margin: 0 0 10px;
+  line-height: 1.55;
+  transition: transform .2s ease, opacity .2s ease;
+  opacity: .95;
+}
+
+.footer-grid ul li:hover{
+  transform: translateX(4px);
+  opacity: 1;
+}
+
+.footer-grid ul li a{
+  text-decoration: none;
+  color: rgba(255,255,255,.72);
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color .2s ease, text-shadow .2s ease;
+}
+
+/* จุดนำหน้าเล็ก ๆ ให้ดูเป็นระบบ */
+.footer-grid ul li a::before{
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  background: rgba(255,215,0,.35);
+  box-shadow: 0 0 10px rgba(255,215,0,.15);
+  flex: 0 0 6px;
+}
+
+.footer-grid ul li a:hover{
+  color: #ffd700;
+  text-shadow: 0 0 10px rgba(255,215,0,.35);
+}
+
+/* =========================
+   COPY
+   ========================= */
+.site-footer-gb .copy-gb{
+  margin-top: 22px;
+  font-size: 13px;
+  color: rgba(255,255,255,.6);
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding-top: 12px;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 1024px){
+  .footer-grid{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .footer-grid ul{
+    border-left: none;
+    padding: 0;
+  }
+}
+
+@media (max-width: 600px){
+  .site-footer-gb{ padding: 30px 14px 24px; }
+
+  .footer-grid{
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 14px;
+  }
+
+  .footer-grid ul{
+    border-left: none;
+    padding: 0;
+  }
+
+  .footer-grid ul li{
+    text-align: center;
+  }
+
+  .footer-grid ul li a{
+    justify-content: center;
+  }
+
+  .footer-grid ul li a::before{
+    display: none; /* มือถือไม่ต้องมีจุดนำหน้า */
+  }
+}
+
+/* ==================================================
+   OPTIONAL: ถ้าคุณใช้ <details class="partner-acc"> (อ่านต่อ/ย่อ)
+   ให้สวยเข้าธีมเดียวกัน (ไม่กระทบของเดิมถ้าไม่ได้ใช้)
+   ================================================== */
+.partner-acc{
+  margin-top: 14px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  background: rgba(0,0,0,.28);
+  overflow: hidden;
+}
+
+.partner-sum{
+  list-style: none;
+  cursor: pointer;
+  padding: 12px 14px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  user-select: none;
+}
+
+.partner-acc > summary::-webkit-details-marker{ display:none; }
+
+.partner-sum span:first-child{
+  font-weight: 700;
+  letter-spacing: .2px;
+  color: rgba(255,255,255,.95);
+}
+
+.partner-badge{
+  font-size: 12px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(255,215,0,.25);
+  background: rgba(255,215,0,.08);
+  color: rgba(255,255,255,.85);
+}
+
+.partner-sum::after{
+  content: "▾";
+  font-size: 16px;
+  color: rgba(255,215,0,.9);
+  transition: transform .2s ease;
+}
+
+.partner-acc[open] .partner-sum::after{ transform: rotate(180deg); }
+
+.partner-panel{
+  padding: 12px 12px 14px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  max-height: 320px;
+  overflow: auto;
+}
+
+.partner-list{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 520px){
+  .partner-list{ grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (min-width: 900px){
+  .partner-list{ grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.partner-list a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 10px 10px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: rgba(255,255,255,.9);
+  border: 1px solid rgba(255,255,255,.12);
+  background: rgba(255,255,255,.05);
+  font-size: 14px;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+
+.partner-list a:hover{
+  transform: translateY(-1px);
+  background: rgba(255,215,0,.08);
+  border-color: rgba(255,215,0,.28);
+}
+
+/* scrollbar เนียน ๆ */
+.partner-panel::-webkit-scrollbar{ width: 10px; }
+.partner-panel::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,.14);
+  border-radius: 999px;
+  border: 2px solid rgba(0,0,0,.25);
+}
